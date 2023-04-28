@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * One column layout.
+ *
+ * Available variables:
+ * - attributes: attributes for the wrapper
+ * - content: content regions
+ */
+#}
+
+
+
+
+
+<div class="card teaser-sm teaser-card {{ modifier_class }}">
+  <div class="card-img">
+    <img class="img-fluid img-cover rounded" src={{file_url(url)}}  alt="Real estate image">
+  </div>
+  <div class="card-body d-flex flex-column">
+    <strong class="text-muted">{{content.date}}</strong>
+    <h3 class="card-title">{{content.title}}</h3>
+    <p class="card-text">{{content.summary|render|striptags}}</p>
+    <div class="mt-auto">{{content.readmore}}</div>
+  
+  </div>
+    <div class="card-footer bg-white text-uppercase text-muted"><span class="icon icon--tag"></span> {{content.tags}} </div>
+</div>
+
+

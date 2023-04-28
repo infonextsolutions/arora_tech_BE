@@ -1,0 +1,90 @@
+{#
+/**
+ * @file
+ * One column layout.
+ *
+ * Available variables:
+ * - attributes: attributes for the wrapper
+ * - content: content regions
+ */
+#}
+
+<div class="banner banner-slim">
+  <div class="banner-img">
+   {{content.image}}
+     </div>
+  <div class="banner-overlay banner-overlay-opaque">
+    <div class="page-container">
+     {#<div class="banner-overlay-solid">#}
+      <h4 class="text-uppercase"><span class="badge badge-light">{{content.tags}}</span></h4>
+      <h1>{{ content.title }}</h1>
+     
+      <p class="body-m">
+       {{content.summary}}</p>
+    {#</div>#}
+    </div>
+  </div>
+</div>
+
+{{content.breadcrumb}}
+ 
+<div class='page-container-narrow my-5'>
+ <div class="row">
+
+  
+  <div class="col-lg-8 mr-auto">
+   
+
+  
+
+  {# {% if content.tag|render|striptags %}#}
+  {#  {{ content.tag }}#}
+  {#{% endif %}#}
+   
+      
+   
+  <div class="my-4"> {{content.image}}{{ content.content }}</div>
+   
+  </div>
+  <div class="col-lg-4 col-xl-3 mb-5">
+          <div class="py-3">
+            <h2 class="heading--xs text-center">Property Details</h2>
+            <ul class="list-row body--xs">
+              <li class="align-items-start">
+                <strong class="flex-shrink-0 mr-2"><span class="icon icon--pin"></span> Location</strong>
+                <span class="text-muted">{{content.location}}</span>
+              </li>
+              <li class="align-items-start">
+                <strong class="flex-shrink-0 mr-2"><span class="icon icon--building"></span>Type</strong>
+                <span class="text-muted">{{content.tags}}</span>
+              </li>
+              <li class="align-items-start">
+                <strong class="flex-shrink-0 mr-2"><span class="icon icon--bookmark-add"></span> Property ID</strong>
+                <span class="text-muted">{{content.code}}</span></span>
+              </li>
+              {#<li class="align-items-start">#}
+              {#  <strong class="flex-shrink-0 mr-2"><span class="icon icon--help"></span> Rooms</strong>#}
+              {#  <span class="text-muted">3BR house, 2 bay carport, large storage shed, 3 stand shearing shed, timber yards</span>#}
+              {#</li>#}
+            </ul>
+          </div>
+          {#<div class="pt-3 pb-5">#}
+          {#  <h2 class="heading--xs">Property Location</h2>#}
+          {#  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52224.04992871389!2d147.32557621569418!3d-35.10663296490474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b18999d3a78b677%3A0x50609b4904426f0!2sWagga+Wagga+NSW+2650!5e0!3m2!1sen!2sau!4v1545187888007" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>#}
+          {#</div>#}
+                    <div class="py-3 px-3 text-center">
+            <h2 class="heading--xs">Contact the Dealer</h2>
+            <img class="img-fluid rounded-circle mb-3" src="https://picsum.photos/210?image=602" alt="Agent Photo">
+            <h3 class="heading--s mb-2"><a href="javascript:void(0)">{{content.name}}</a></h3>
+            <p><span class="icon icon--phone"></span><a class="link" href="tel:{{content.contact}}"> {{content.contact}}</a></p>
+            <p>
+            <a class="btn btn-secondary btn-icon-left icon--email-white btn-sm" href="mailto:{{content.email}}">Email the Dealer</a></p>
+
+            <p><a class="btn btn-icon-left icon--whatsapp btn-sm btn-primary" target="_blank" href="https://wa.me/{{'91'~content.contact|render|striptags|raw|replace({' ':''})}}?text={{'I%20am%20inquiring%20about%20the%20property%20listing%20'~content.code|render|striptags|raw}}">Chat on Whatsapp</a></p>
+                      </div>
+        </div>
+ 
+  </div>
+    
+{{content.related}}
+</div>

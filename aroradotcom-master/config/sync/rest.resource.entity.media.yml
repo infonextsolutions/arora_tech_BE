@@ -1,0 +1,25 @@
+uuid: d34498c6-0a14-4175-9eec-574bdde04e33
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hal
+    - media
+    - serialization
+id: entity.media
+plugin_id: 'entity:media'
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - hal_json
+      - json
+    supported_auth:
+      - basic_auth
+  POST:
+    supported_formats:
+      - hal_json
+      - json
+    supported_auth:
+      - basic_auth

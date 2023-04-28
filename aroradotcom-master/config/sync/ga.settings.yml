@@ -1,0 +1,20 @@
+premium: false
+add_default_commands: true
+tracking_id: UA-153641512-1
+send_pageview: true
+sample_rate: 100
+site_speed_sample_rate: 1
+force_ssl: false
+plugins:
+  linkid: true
+  displayfeatures: true
+  linker:
+    enable: false
+    domains: {  }
+track_user_id: true
+user_roles:
+  mode: disabled
+  roles: {  }
+anonymize_ip: false
+_core:
+  default_config_hash: 2Twcn1ou0yK4eR5AvQ1RO4qWCvQVncqqGGW7OZwrjLY

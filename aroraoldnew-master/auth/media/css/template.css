@@ -1,0 +1,368 @@
+
+/*
+      Created by Amit Chandra
+	  
+	  
+	  
+*/
+
+
+
+body {
+ font-family:'Trebuchet MS', Helvetica, sans-serif;
+ font-size: 14px;
+}
+#wrapper { 
+ margin: 0 auto;
+ 
+}
+.ui-tabs
+{ width: 80%;
+ margin-left: 120px;
+ margin-top:10px;
+ margin-bottom:10px;
+}
+#faux {
+ 
+ margin-bottom: 5px;
+ overflow: auto; 
+ width: 100%
+}
+#header {
+ 
+ 
+  background-color: #dfeff9;
+  height: 50px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dfeff9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dfeff9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dfeff9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dfeff9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dfeff9);
+    background-image:         linear-gradient(top, #ebf3fc, #dfeff9);
+	
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+   -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    
+    
+}
+#navigation {
+
+ padding: 2px;
+ margin: 0px 0px 0px 0px;
+ background: #dfeff9;
+}
+#leftcolumn { 
+ display: inline;
+ color: #333;
+ margin: 10px;
+ padding: 0px;
+ width: 195px;
+ float: left;
+}
+#rightcolumn { 
+ float: right;
+ color: #333;
+ margin: 10px;
+ padding: 0px;
+ width: 683px;
+ display: inline;
+ position: relative;
+}
+#footer { 
+ clear: both;
+ color: #333;
+ background: #ABBEBE;
+ margin: 0px 0px 10px 0px;
+ padding: 10px;
+ 
+   bottom:0;
+ width: 100%;
+}
+/*.clear { clear: both; background: none; }*/
+<!---->Then round the corners:
+
+th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+<!---->Add in the hover effect:
+
+.sortable tr:hover
+{
+  background: #e8faf7;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+<!---->For browsers that don’t support the hover effect, you can use some jQuery:
+
+$('.sortable tr').mouseover(function(){
+    $(this).addClass('highlight');
+}).mouseout(function(){
+    $(this).removeClass('highlight');
+});
+
+<!---->Here is the code for the highlight class:
+
+.highlight
+{
+  background: #e8faf7;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+<!---->To create the zebra striping, if you so choose to use this style design instead of the hover effect. I wouldn’t recommend doing both:
+
+.zebra tbody tr:nth-child(even) {
+    background: #f5f5f5;
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+}
+<!---->What About Older Browsers?
+
+<!---->The above code will not work on older browsers, so to accommodate for that, you can use:
+
+$(".zebra tr:even").addClass('alternate');
+
+<!---->and 
+
+.alternate {
+    background: #f5f5f5;
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+}
+
+<!---->That should create the alternate striping effect.
+
+<!---->Here’s the full, complete CSS code:
+
+body {
+    width: 600px;
+    margin: 40px auto;
+    font-family: 'trebuchet MS', 'Lucida sans', Arial;
+    font-size: 14px;
+    color: #444;
+}
+
+table {
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    	
+        
+}
+
+.button:hover {
+	text-decoration: none;
+}
+.button:active {
+	position: relative;
+	top: 1px;
+}
+
+.blue {
+	color: #d9eef7;
+	border: solid 1px #0076a3;
+	background: #0095cd;
+	background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+	background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+}
+.blue:hover {
+	background: #007ead;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+	background: -moz-linear-gradient(top,  #f88e11,  #f06015);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+}
+.blue:active {
+	color: #80bed6;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee));
+	background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
+}
+
+.sortable {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc; 
+	font-family: 'trebuchet MS', 'Lucida sans', Arial;
+    font-size: 14px;
+   -moz-box-shadow: 0 1px 1px #ccc; 
+   box-shadow: 0 1px 1px #ccc;         
+}
+
+.sortable tr:hover {
+    background: #e8faf7;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}    
+    
+.sortable td, .sortable th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;    
+}
+.sortable caption
+{
+	font-family: 'trebuchet MS', 'Lucida sans', Arial;
+    font-size: 18px;
+}
+.sortable th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+	
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+   -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+}
+
+.sortable td:first-child, .sortable th:first-child {
+    border-left: none;
+}
+
+.sortable th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.sortable th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.sortable tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.sortable tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+/* Sortable tables */
+sortable.sortable thead {
+    background-color:#eee;
+    color:#666666;
+    font-weight: bold;
+    cursor: default;
+}
+
+.zebra td, .zebra th {
+    padding: 10px;
+    border-bottom: 1px solid #f2f2f2;    
+}
+
+.zebra tbody tr:nth-child(even) {
+    background: #f5f5f5;
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+   -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+}
+
+.zebra th {
+    text-align: left;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+   border-bottom: 1px solid #ccc;
+    background-color: #eee;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eee));
+    background-image: -webkit-linear-gradient(top, #f5f5f5, #eee);
+    background-image:    -moz-linear-gradient(top, #f5f5f5, #eee);
+    background-image:     -ms-linear-gradient(top, #f5f5f5, #eee);
+    background-image:      -o-linear-gradient(top, #f5f5f5, #eee); 
+   background-image:         linear-gradient(top, #f5f5f5, #eee);
+}
+
+.zebra th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;  
+}
+
+.zebra th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.zebra tfoot td {
+    border-bottom: 0;
+    border-top: 1px solid #fff;
+    background-color: #f1f1f1;  
+}
+
+.zebra tfoot td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.zebra tfoot td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}  
+
+h4
+
+	{font-family: Gill Sans, Verdana;
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+		position: absolute;
+	left: 270px;
+	top: 20px;
+
+	
+	}
+h3
+
+        {font-family: times, Times New Roman, times-roman, georgia, serif;
+	color: #444;
+	margin: 0;
+	padding: 0px 0px 6px 0px;
+	font-size: 40px;
+	line-height: 44px;
+	letter-spacing: -2px;
+	font-weight: bold;
+		}
+
+
+<!----><table class="sortable">
+

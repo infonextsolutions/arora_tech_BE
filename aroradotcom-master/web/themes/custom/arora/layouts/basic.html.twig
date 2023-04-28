@@ -1,0 +1,48 @@
+{#
+/**
+ * @file
+ * One column layout.
+ *
+ * Available variables:
+ * - attributes: attributes for the wrapper
+ * - content: content regions
+ */
+#}
+
+<div class="banner banner-slim">
+  <div class="banner-img">
+   {{content.image}}
+     </div>
+  <div class="banner-overlay banner-overlay-opaque">
+    <div class="page-container">
+     {#<div class="banner-overlay-solid">#}
+      {#<h4 class="text-uppercase"><span class="badge badge-light">{{content.tags}}</span></h4>#}
+      <h1>{{ content.title }}</h1>
+     
+      <p class="body-m">
+       {{content.bannertext}}</p>
+       {{content.bannerlink}}
+    {#</div>#}
+    </div>
+  </div>
+</div>
+
+{{content.breadcrumb}}
+ 
+<div class='page-container my-5'>
+ <div class="row">
+
+  
+  <div class="col-lg-8 mx-auto">
+   
+
+      
+   
+  <div class="my-4">{{ content.content }}</div>
+   
+  </div>
+  
+  </div>
+    
+{{content.related}}
+</div>

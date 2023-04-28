@@ -1,0 +1,19 @@
+uuid: 717d3445-244c-451a-a37f-c4ceb732c2d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.map_download
+id: paragraph.map_download.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: map_download
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

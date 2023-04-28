@@ -1,0 +1,174 @@
+uuid: f32af57f-845d-40fe-b5cc-4ac9d190d5d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.property.field_banner_image
+    - field.field.node.property.field_contact_number
+    - field.field.node.property.field_dealers_name
+    - field.field.node.property.field_description
+    - field.field.node.property.field_email
+    - field.field.node.property.field_location
+    - field.field.node.property.field_property_code
+    - field.field.node.property.field_tags
+    - field.field.node.property.field_test
+    - node.type.property
+  module:
+    - ds
+    - field_layout
+    - image
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  ds:
+    layout:
+      id: property
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      title:
+        - node_title
+      image:
+        - field_test
+      code:
+        - field_property_code
+      name:
+        - field_dealers_name
+      contact:
+        - field_contact_number
+      content:
+        - field_description
+      breadcrumb:
+        - breadcrumb
+      tags:
+        - field_tags
+      email:
+        - field_email
+      location:
+        - field_location
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+id: node.property.search_index
+targetEntityType: node
+bundle: property
+mode: search_index
+content:
+  breadcrumb:
+    weight: 6
+    region: breadcrumb
+    settings: {  }
+    third_party_settings: {  }
+  field_contact_number:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: string
+    region: contact
+  field_dealers_name:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: name
+  field_description:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_email:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: basic_string
+    region: email
+  field_location:
+    weight: 9
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: string
+    region: location
+  field_property_code:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: code
+  field_tags:
+    weight: 7
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_label
+    region: tags
+  field_test:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: image
+    region: image
+hidden:
+  field_banner_image: true
+  links: true

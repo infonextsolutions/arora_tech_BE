@@ -1,0 +1,22 @@
+uuid: cccbbfba-01e5-48a8-818b-00373c63338a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.news_block.field_news_block
+    - paragraphs.paragraphs_type.news_block
+  module:
+    - block_field
+id: paragraph.news_block.default
+targetEntityType: paragraph
+bundle: news_block
+mode: default
+content:
+  field_news_block:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: block_field
+    region: content
+hidden: {  }

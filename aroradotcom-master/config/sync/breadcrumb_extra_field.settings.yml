@@ -1,0 +1,13 @@
+breadcrumb_extra_field_admin:
+  block_content:
+    basic: 0
+  comment:
+    comment: 0
+  node:
+    news: news
+    page: page
+    property: property
+  taxonomy_term:
+    tags: 0
+  user:
+    user: 0

@@ -1,0 +1,28 @@
+uuid: 29613a77-6871-4ed3-8a0c-375d52a81b2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_map
+    - media.type.file
+    - paragraphs.paragraphs_type.map_download
+id: paragraph.map_download.field_map
+field_name: field_map
+entity_type: paragraph
+bundle: map_download
+label: Map
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      file: file
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

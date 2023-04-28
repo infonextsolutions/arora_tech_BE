@@ -1,0 +1,19 @@
+uuid: b575f6d5-cfa9-4f3d-8791-d3147642ad46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_property_code
+    - node.type.property
+id: node.property.field_property_code
+field_name: field_property_code
+entity_type: node
+bundle: property
+label: 'Property code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

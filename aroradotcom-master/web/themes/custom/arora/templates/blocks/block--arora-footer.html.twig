@@ -1,0 +1,53 @@
+{% set heading_id = attributes.id ~ '-menu'|clean_id %}
+
+  <div class="page-container">
+<div class="row">
+    
+    <div class="col-lg-12 col-xl-3">
+         <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+      <img src="{{ relative_logo_url}}" style="width:15rem;" alt="{{ 'Home'|t }}" />
+    </a>
+    </div>
+    
+    
+    
+    
+    <div class="col-lg-8 col-xl-6">
+        {#<nav class="nav-footer ">#}
+        {#    {{ content }}#}
+        {#</nav>#}
+    </div>
+    
+    
+    
+    <div class="col-lg-4 col-xl-3">
+        <nav class="social-links">
+  <h2 class="heading--xxs social-links-title">Need to get in touch?</h2>
+  <ul class="list-inline">
+    <li><a target="_blank" href="https://www.facebook.com/Arora-Realtech-165127780320836/" class="icon icon--social-facebook">Facebook</a></li>
+    {#<li><a target="_blank" href="javascript:void(0)" class="icon icon--social-twitter">Twitter</a></li>#}
+    <li><a target="_blank" href="https://www.linkedin.com/in/arun-arora-6baaa224/" class="icon icon--social-linkedin">LinkedIn</a></li>
+    <li><a target="_blank" href="mailto:info@arorarealtech.com" class="icon icon--social-email">Email</a></li>
+  </ul>
+</nav>
+    </div>
+    
+    
+  {# Label. If not displayed, we still provide it for screen readers. #}
+  {#{% if not configuration.label_display %}#}
+  {#  {% set title_attributes = title_attributes.addClass('visually-hidden') %}#}
+  {#{% endif %}#}
+  {#{{ title_prefix }}#}
+  {#<h2{{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}</h2>#}
+  {#{{ title_suffix }}#}
+
+  {# Menu. #}
+  {#{% block content %}#}
+  {#  {{ content }}#}
+  {#{% endblock %}#}
+
+</div>
+  
+  </div>
+
+  

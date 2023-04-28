@@ -1,0 +1,174 @@
+uuid: 39bd0199-c6fb-4e0f-a14b-a32d66f37ef9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.news.field_add_component
+    - field.field.node.news.field_banner_image
+    - field.field.node.news.field_news_description
+    - field.field.node.news.field_summary
+    - field.field.node.news.field_tags
+    - node.type.news
+  module:
+    - ds
+    - field_layout
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  ds:
+    layout:
+      id: teaser
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      title:
+        - node_title
+      image:
+        - field_banner_image
+      summary:
+        - field_summary
+      date:
+        - node_post_date
+      readmore:
+        - node_link
+      tags:
+        - field_tags
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: ''
+          class: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 3
+        label: hidden
+        formatter: ds_post_date_short
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: text-uppercase
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+      node_link:
+        plugin_id: node_link
+        weight: 4
+        label: hidden
+        formatter: default
+        settings:
+          'link text': 'Read more'
+          'link class': 'mt-auto mr-auto btn btn-sm  btn-outline-primary'
+          wrapper: ''
+          class: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.news.teaser
+targetEntityType: node
+bundle: news
+mode: teaser
+content:
+  field_banner_image:
+    type: entity_reference_entity_view
+    weight: 1
+    region: image
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  field_summary:
+    type: text_trimmed
+    weight: 2
+    region: summary
+    label: hidden
+    settings:
+      trim_length: 100
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_tags:
+    type: entity_reference_label
+    weight: 5
+    region: tags
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: span
+            fi-cl: ' badge badge-light'
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+hidden:
+  breadcrumb: true
+  field_add_component: true
+  field_news_description: true
+  links: true

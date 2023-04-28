@@ -1,0 +1,23 @@
+uuid: ae51371c-c464-414d-af7d-5713471560c0
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: pq_mEIu_B4widZN7Ap81iCJSjShFFdcL0jEiCi8VrDk
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'search content'
+  - 'use text format restricted_html'
+  - 'view media'
+  - 'view paragraph content 1_column'
+  - 'view paragraph content 2_column'
+  - 'view paragraph content map_download'
+  - 'view paragraph content news_block'
+  - 'view paragraph content newsletter'
+  - 'view paragraph content property_block'

@@ -1,0 +1,174 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_system_theme_settings_alter() for settings form.
+ *
+ * Replace Barrio setting options with subtheme ones.
+ *
+ * Example on how to alter theme settings form
+ */
+function space_form_system_theme_settings_alter(&$form, FormStateInterface $form_state)
+{
+    $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = array(
+      'bg-primary' => t('Primary'),
+      'bg-secondary' => t('Secondary'),
+      'bg-light' => t('Light'),
+      'bg-dark' => t('Dark'),
+      'bg-white' => t('White'),
+      'bg-transparent' => t('Transparent'),
+  );
+    $form['fonts']['fonts']['bootstrap_barrio_google_fonts']['#options']['fonts'] = 'Space Fonts';
+    $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = array(
+      'bg-primary' => t('Primary'),
+      'bg-secondary' => t('Secondary'),
+      'bg-light' => t('Light'),
+      'bg-dark' => t('Dark'),
+      'bg-white' => t('White'),
+      'bg-transparent' => t('Transparent'),
+  );
+}
+function space_preprocess_page(&$variables)
+{
+    if (!empty($variables['node'])) {
+        $type = $variables['node']->getType();
+        if ('landing_page' != $type) {
+            $variables['type'] = $type;
+        }
+    }
+
+    $fonts = theme_get_setting('bootstrap_barrio_google_fonts');
+    if ($fonts) {
+        $variables['#attached']['library'][] = ('fonts' == $fonts ? 'space' : 'bootstrap_barrio').'/'.$fonts;
+    }
+}
+
+function space_preprocess_views_view(&$variables)
+{
+    $route = \Drupal::routeMatch()->getRouteName();
+    $term_id = basename(\Drupal::service('path.current')->getPath());
+    if ($term_id) {
+        if (($term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties(['tid' => $term_id])) && 'entity.taxonomy_term.canonical' == $route) {
+            $description = reset($term)->description->value;
+            $variables['tagDesc'] = $description;
+        }
+    }
+
+    if ('views-exposed-form-feature-page-1' === $variables['id']) {
+        $variables['exposed']['#attributes']['class'][] = 'row';
+    }
+}
+
+/**
+ * Implements template_preprocess_field().
+ */
+function arora_preprocess_teaser(&$variables)
+{
+    // Check for your image field.
+    // dump($variables);
+
+    if ($variables['content']['field_banner_image']['#items']->entity) {
+        $variables['url'] = $variables['content']['field_banner_image']['#items']->entity->get('field_media_image')->entity->uri->value;
+    }
+    try {
+        $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+    } catch (Exception $e) {
+        $variables['is_front'] = false;
+    }
+}
+
+/**
+ * Implements template_preprocess_field().
+ */
+function space_preprocess_teaser__horizontal(&$variables)
+{
+    // Check for your image field.
+
+    $variables['url'] = $variables['content']['field_feature_image']['#items']->entity->get('field_media_image')->entity->uri->value;
+
+    try {
+        $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+    } catch (Exception $e) {
+        $variables['is_front'] = false;
+    }
+    $variables['#cache']['contexts'][] = 'url.path.is_front';
+}
+function space_preprocess_feature(&$variables)
+{
+    $variables['type'] = 'feature';
+}
+function space_preprocess_job(&$variables)
+{
+    $variables['type'] = 'job';
+}
+function space_preprocess_news(&$variables)
+{
+    $variables['type'] = 'news';
+}
+function space_preprocess_opinion(&$variables)
+{
+    $variables['type'] = 'opinion';
+}
+function space_preprocess_event(&$variables)
+{
+    $variables['type'] = 'event';
+}
+function space_preprocess_homepage(&$variables)
+{
+    try {
+        $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+    } catch (Exception $e) {
+        $variables['is_front'] = false;
+    }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function space_theme_suggestions_page_alter(array &$suggestions, array $variables)
+{
+    // Get Request Object.
+    $request = \Drupal::request();
+
+    // If there is HTTP Exception..
+    if ($exception = $request->attributes->get('exception')) {
+        // Get the status code.
+        $status_code = $exception->getStatusCode();
+        if (in_array($status_code, array(401, 403, 404))) {
+            $suggestions[] = 'page__'.$status_code;
+        }
+    }
+}
+
+function arora_preprocess_block(&$variables)
+{
+    $variables['relative_logo_url'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
+}
+
+function arora_form_alter(&$form, &$form_state, $form_id)
+{
+    if ('search_form' == $form_id) {
+        $form['#access'] = false;
+    }
+}
+function arora_preprocess_search_result(&$vars)
+{
+    //delete user + date
+    $vars['info'] = '';
+
+    // //delete user
+    // $vars['info'] = $vars['info_split']['date'];
+
+    // //delete date
+    // $vars['info'] = $vars['info_split']['user'];
+}
+
+function arora_preprocess_file_link(&$vars)
+{
+    $vars['file_link'] = $vars['link']['#url']->getUri();
+}

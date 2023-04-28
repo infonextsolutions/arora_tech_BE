@@ -1,0 +1,33 @@
+uuid: 07eacfda-e8d4-4ed9-a621-842574809ab5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.news_block.field_news_block
+    - paragraphs.paragraphs_type.news_block
+  module:
+    - block_field
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.news_block.default
+targetEntityType: paragraph
+bundle: news_block
+mode: default
+content:
+  field_news_block:
+    weight: 0
+    settings:
+      plugin_id: ''
+      settings: {  }
+      configuration_form: full
+    third_party_settings: {  }
+    type: block_field_default
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,148 @@
+.banner {
+  background-color: #002664;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-img,
+.banner picture {
+  height: 315px;
+  display: block;
+  position: relative;
+}
+
+@media (min-width: 900px) {
+  .banner-img,
+  .banner picture {
+    height: 650px;
+  }
+}
+
+.banner img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .banner-overlay {
+    text-align: left;
+  }
+}
+
+.banner-overlay .page-container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 900px) {
+  .banner-overlay .page-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.banner-overlay .page-container > :last-child {
+  margin-bottom: 0;
+}
+
+.page-container .banner-overlay .page-container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 900px) {
+  .page-container .banner-overlay .page-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.banner-overlay-half {
+  top: auto;
+}
+
+.banner-overlay-half h2 {
+  margin-bottom: 0.5rem;
+}
+
+.banner-overlay-opaque {
+  background-color: rgba(13, 18, 31, 0.7);
+}
+
+.banner-overlay-solid {
+  background-color: #d7153a;
+}
+
+@media (max-width: 899.98px) {
+  .banner-overlay-box {
+    position: static;
+  }
+}
+
+@media (max-width: 899.98px) {
+  .banner-overlay-box .page-container {
+    padding: 0;
+  }
+}
+
+.banner-overlay-box .banner-overlay-solid,
+.banner-overlay-box .banner-overlay-opaque {
+  padding: 1rem;
+}
+
+@media (min-width: 900px) {
+  .banner-overlay-box .banner-overlay-solid,
+  .banner-overlay-box .banner-overlay-opaque {
+    padding: 2rem;
+    max-width: 32rem;
+  }
+}
+
+.banner-overlay-box .banner-overlay-solid > :last-child,
+.banner-overlay-box .banner-overlay-opaque > :last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 900px) {
+  .banner-slim .banner-img,
+  .banner-slim picture {
+    height: 490px;
+  }
+}
+
+.banner-plain {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.banner-plain h1 {
+  color: #002664;
+  margin: 1rem auto;
+  max-width: 54rem;
+}
+
+/*# sourceMappingURL=banner.css.map */

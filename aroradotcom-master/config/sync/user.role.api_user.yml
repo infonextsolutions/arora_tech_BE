@@ -1,0 +1,16 @@
+uuid: e0e0c10e-481e-4ea7-8646-40ca4fd88336
+langcode: en
+status: true
+dependencies: {  }
+id: api_user
+label: 'API user'
+weight: 3
+is_admin: null
+permissions:
+  - 'create file media'
+  - 'create image media'
+  - 'create media'
+  - 'create property content'
+  - 'edit own image media'
+  - 'view own unpublished content'
+  - 'view own unpublished media'

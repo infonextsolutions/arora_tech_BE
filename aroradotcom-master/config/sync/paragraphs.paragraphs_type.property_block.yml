@@ -1,0 +1,9 @@
+uuid: 8edd2dce-4b4b-4360-8387-4687d0162182
+langcode: en
+status: true
+dependencies: {  }
+id: property_block
+label: 'Property block'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

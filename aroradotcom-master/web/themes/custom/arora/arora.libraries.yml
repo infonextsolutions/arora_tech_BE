@@ -1,0 +1,48 @@
+global-styling:
+  css:
+    theme:
+      css/base.css: {}
+      css/layout.css: {}
+     
+      css/accordion.css: {}
+      css/banner.css: {}
+      css/breadcrumbs.css: {}
+      css/carousel.css: {}
+      css/footer.css: {}
+      css/header.css: {}
+      css/icons.css: {}
+      css/buttons.css: {}
+      css/form.css: {}
+      css/image-grid.css: {}
+      css/logo.css: {}
+      css/navigation.css: {}
+      css/pagination.css: {}
+      css/pre-footer.css: {}
+      css/section-title.css: {}
+      css/social-links.css: {}
+      css/tabbed.css: {}
+      css/teasers.css: {}
+      css/base/hr/hr.css: {}
+      css/base/hero-banner/hero-banner.css: {}
+      css/base/media/media.css: {}
+      css/base/table/table.css: {}
+      css/base/tab-list/tab-list.css: {}
+      css/style.css: {}
+      fonts/fonts.css: {}
+  js:
+    js/util.js: {}
+    js/collapse.js: {}
+    js/modal.js: {}
+    js/navigation.js: {}
+    js/polyfill.js: {}
+    js/tabbed.js: {}
+    js/carousel.js: {}
+  dependencies:
+    - core/jquery
+bootstrap_cdn:
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js: {}
+    //stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js: {}
+  css:
+    component:
+      //stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css: {}

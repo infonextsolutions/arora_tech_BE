@@ -1,0 +1,32 @@
+uuid: e4bef9ae-d12c-4afc-b859-654e84669a1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_add_component
+    - node.type.news
+  module:
+    - entity_reference_revisions
+id: node.news.field_add_component
+field_name: field_add_component
+entity_type: node
+bundle: news
+label: 'Add components'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 1
+    target_bundles: null
+    target_bundles_drag_drop:
+      1_column:
+        weight: 3
+        enabled: false
+      2_column:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

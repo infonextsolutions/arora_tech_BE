@@ -1,0 +1,161 @@
+uuid: 2301d691-6817-4d85-859c-315cb028a907
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.property.field_banner_image
+    - field.field.node.property.field_contact_number
+    - field.field.node.property.field_dealers_name
+    - field.field.node.property.field_description
+    - field.field.node.property.field_email
+    - field.field.node.property.field_location
+    - field.field.node.property.field_property_code
+    - field.field.node.property.field_tags
+    - field.field.node.property.field_test
+    - image.style.large
+    - node.type.property
+  module:
+    - ds
+    - field_layout
+    - image
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  ds:
+    layout:
+      id: teaser-property
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      title:
+        - node_title
+      image:
+        - field_test
+      summary:
+        - field_description
+      date:
+        - node_post_date
+      readmore:
+        - node_link
+      tags:
+        - field_tags
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: ''
+          class: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 3
+        label: hidden
+        formatter: ds_post_date_short
+      node_link:
+        plugin_id: node_link
+        weight: 4
+        label: hidden
+        formatter: default
+        settings:
+          'link text': 'Read more'
+          'link class': 'mt-auto mr-auto btn  btn-sm btn-outline-primary'
+          wrapper: ''
+          class: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+id: node.property.teaser
+targetEntityType: node
+bundle: property
+mode: teaser
+content:
+  field_description:
+    type: text_trimmed
+    weight: 2
+    region: summary
+    label: hidden
+    settings:
+      trim_length: 100
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ...
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+  field_tags:
+    type: entity_reference_label
+    weight: 5
+    region: tags
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_test:
+    type: image_url
+    weight: 1
+    region: image
+    label: hidden
+    settings:
+      image_style: large
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+hidden:
+  breadcrumb: true
+  field_banner_image: true
+  field_contact_number: true
+  field_dealers_name: true
+  field_email: true
+  field_location: true
+  field_property_code: true
+  links: true

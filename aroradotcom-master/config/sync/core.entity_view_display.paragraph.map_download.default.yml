@@ -1,0 +1,52 @@
+uuid: 529c4f29-4af8-45c6-8966-7c5fe4883995
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.map_download.field_map
+    - field.field.paragraph.map_download.field_title
+    - paragraphs.paragraphs_type.map_download
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: file
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      title:
+        - field_title
+      file:
+        - field_map
+id: paragraph.map_download.default
+targetEntityType: paragraph
+bundle: map_download
+mode: default
+content:
+  field_map:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    region: file
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: title
+hidden: {  }

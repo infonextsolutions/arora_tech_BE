@@ -1,0 +1,92 @@
+/**
+ * Place your custom styles here.
+ */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+/**
+ * Place your custom styles here.
+ */
+/*
+* added gotham fonts
+*/
+/*@font-face {*/
+/*  font-family: 'Gotham-Book';*/
+/*  src: url('Gotham-Book.eot');*/
+/*  src: url('Gotham-Book.woff') format('woff'),*/
+/*  url('Gotham-Book.ttf') format('truetype'),*/
+/*  url('Gotham-Book.eot?#iefix') format('embedded-opentype');*/
+/*  font-weight: normal;*/
+/*  font-style: normal;*/
+/*}*/
+
+
+
+/*@font-face {*/
+/*  font-family: 'Gotham-Bold';*/
+/*  src: url('Gotham-Bold.eot');*/
+/*  src: url('Gotham-Bold.woff') format('woff'),*/
+/*  url('Gotham-Bold.ttf') format('truetype'),*/
+/*  url('Gotham-Bold.eot?#iefix') format('embedded-opentype');*/
+/*  font-weight: normal;*/
+/*  font-style: normal;*/
+/*}*/
+
+/*@font-face {*/
+/*  font-family: 'Gotham-Medium';*/
+/*  src: url('Gotham-Medium.eot');*/
+/*  src: url('Gotham-Medium.woff') format('woff'),*/
+/*  url('Gotham-Medium.ttf') format('truetype'),*/
+/*  url('Gotham-Medium.eot?#iefix') format('embedded-opentype');*/
+/*  font-weight: normal;*/
+/*  font-style: normal;*/
+/*}*/
+
+
+/*@font-face {*/
+/*  font-family: 'Gotham-Light';*/
+/*  src: url('Gotham-Light.eot');*/
+/*  src: url('Gotham-Light.woff') format('woff'),*/
+/*  url('Gotham-Light.ttf') format('truetype'),*/
+/*  url('Gotham-Light.eot?#iefix') format('embedded-opentype');*/
+/*  font-weight: normal;*/
+/*  font-style: normal;*/
+/*}*/
+
+
+/* Extra small devices (phones, less than 768px) */
+
+/* No media query since this is the default in Bootstrap */
+
+/* common styles */
+
+body,
+caption,
+p,
+th,
+td,
+input,
+textarea,
+select,
+option,
+legend,
+fieldset
+ {
+
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3
+
+{
+   font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+h4,
+h5,
+h6
+{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}

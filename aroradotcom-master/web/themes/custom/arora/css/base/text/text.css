@@ -1,0 +1,314 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  line-height: 1.6;
+  font-family: Gibson, Helvetica, Arial, sans-serif;
+  color: #0d121f;
+  background: #fff;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+@media print {
+  html {
+    font-size: 12pt;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text--blue {
+  color: #1976d2;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+p {
+  margin: 0 0 2rem;
+  max-width: 49rem;
+}
+
+.body--xxl {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 600px) {
+  .body--xxl {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+}
+
+.body--xl {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 600px) {
+  .body--xl {
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+}
+
+.lede,
+.body--l {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 600px) {
+  .lede,
+  .body--l {
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+}
+
+p,
+ul,
+ol,
+.body--m {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 600px) {
+  p,
+  ul,
+  ol,
+  .body--m {
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+}
+
+.small,
+.body--s {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 600px) {
+  .small,
+  .body--s {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+.body--xs {
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 600px) {
+  .body--xs {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+}
+
+.body--xxs {
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+h1,
+.heading--xxl {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  font-weight: 600;
+  font-weight: 700;
+  font-style: normal;
+  margin: 2rem 0;
+}
+
+@media (min-width: 600px) {
+  h1,
+  .heading--xxl {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 700;
+  }
+}
+
+h1:first-child,
+.heading--xxl:first-child {
+  margin-top: 0;
+}
+
+.heading--xl {
+  font-size: 2rem;
+  line-height: 1.1;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+@media (min-width: 600px) {
+  .heading--xl {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    font-weight: 600;
+  }
+}
+
+h2,
+.heading--l {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+@media (min-width: 600px) {
+  h2,
+  .heading--l {
+    font-size: 2rem;
+    line-height: 1.1;
+    font-weight: 600;
+  }
+}
+
+h2:first-child,
+.heading--l:first-child {
+  margin-top: 0;
+}
+
+h3,
+.heading--m {
+  font-size: 1.125rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 2rem 0;
+}
+
+@media (min-width: 600px) {
+  h3,
+  .heading--m {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+}
+
+h3:first-child,
+.heading--m:first-child {
+  margin-top: 0;
+}
+
+h4,
+.heading--s {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+@media (min-width: 600px) {
+  h4,
+  .heading--s {
+    font-size: 1.125rem;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+}
+
+h5,
+h6,
+.heading--xs {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.heading--xxs {
+  font-size: 0.875rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+ul,
+ol {
+  margin: 0 0 2rem;
+  padding: 0 0 0 1rem;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin: 0 0 0;
+}
+
+ul li,
+ol li {
+  max-width: 49rem;
+}
+
+dl dt {
+  margin: 2rem 0 0;
+  font-weight: 600;
+}
+
+dl dt:first-child {
+  margin-top: 0;
+}
+
+dl dd {
+  margin: 0;
+}
+
+blockquote {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin: 2rem 0;
+  padding: 0 0 0 2rem;
+  border-left: 4px solid #1976d2;
+}
+
+@media (min-width: 600px) {
+  blockquote {
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+}
+
+.centered {
+  text-align: center;
+}
+
+.centered p,
+.centered ul,
+.centered ol {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 49rem;
+}
+
+.centered li {
+  list-style-position: inside;
+}
+
+.align--left {
+  text-align: left;
+  color: #1976d2;
+}
+
+/*# sourceMappingURL=text.css.map */

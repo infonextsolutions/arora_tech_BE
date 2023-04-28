@@ -1,0 +1,105 @@
+/*
+ * KSS only styles
+ */
+.kss-style h3 {
+  font-size: 1.2rem;
+  max-width: none;
+}
+
+.kss-style h4 {
+  font-size: 1rem;
+  max-width: none;
+}
+
+.kss-style h2,
+.kss-style p,
+.kss-style li {
+  max-width: none;
+}
+
+.kss-style table td,
+.kss-style table th {
+  padding: .5rem;
+}
+
+.kss-style .kss-font-demo {
+  font-family: 'Gotham A', 'Gotham B', sans-serif;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  color: #828a8e;
+}
+
+.kss-style .kss-font-demo__m {
+  font-weight: 500;
+}
+
+.kss-style .kss-font-demo__b {
+  font-weight: 700;
+}
+
+/**
+ * Fix issues with kss pseudo classes.
+ */
+.pseudo-class-focus {
+  outline: none !important;
+  border: 1px solid #4D90FE !important;
+  box-shadow: 0 0 5px #4D90FE !important;
+}
+
+/**
+ * Custom styles.
+ */
+[id^='kssref-5'] .page-container::after,
+[id^='kssref-5'] .page-container-fluid::after,
+[id^='kssref-5'] .page-container-narrow::after,
+[id^='kssref-5'] .page-start::after,
+[id^='kssref-5'] .page-middle::after,
+[id^='kssref-5'] .page-end::after,
+[id^='kssref-5'] .row > div::after {
+  border: 1px solid cyan;
+  background: rgba(0, 255, 255, 0.2);
+  height: 50px;
+  display: block;
+  content: "";
+  margin: .75rem 0;
+}
+
+[id^='kssref-5'] .page-middle::after {
+  height: calc(100vh - 198px);
+}
+
+[id^='kssref-3'] table td:first-child {
+  min-width: 160px;
+}
+
+[id^='kssref-3'] table .icon {
+  margin: 0 7px;
+}
+
+#kssref-4-button-icon .kss-style + .kss-modifier__wrapper {
+  display: none;
+}
+
+#kssref-3-reverse table td:last-child {
+  background-color: #4a4e57;
+  color: #fff;
+}
+
+[id^='kssref-7'] .teaser-lg,
+[id^='kssref-7'] .teaser-sm {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+[id^='kssref-8'] .kss-modifier__example > .row {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#kssref-7-carousel .kss-modifier__example .carousel {
+  max-width: 54rem;
+  margin-right: auto;
+  margin-left: auto;
+}

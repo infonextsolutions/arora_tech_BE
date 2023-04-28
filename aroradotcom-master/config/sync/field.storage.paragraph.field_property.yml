@@ -1,0 +1,19 @@
+uuid: d6652ed7-dfc9-493e-a0fe-3b30219ef26a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_field
+    - paragraphs
+id: paragraph.field_property
+field_name: field_property
+entity_type: paragraph
+type: block_field
+settings: {  }
+module: block_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

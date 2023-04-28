@@ -1,0 +1,148 @@
+uuid: 7f0cc3cc-5b64-40bc-9a08-d51e0dc581c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news.field_add_component
+    - field.field.node.news.field_banner_image
+    - field.field.node.news.field_news_description
+    - field.field.node.news.field_summary
+    - field.field.node.news.field_tags
+    - node.type.news
+  module:
+    - ds
+    - entity_reference_revisions
+    - field_layout
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: news
+    settings:
+      label: ''
+  ds:
+    layout:
+      id: news
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      title:
+        - node_title
+      image:
+        - field_banner_image
+      summary:
+        - field_summary
+      content:
+        - field_news_description
+        - field_add_component
+      breadcrumb:
+        - breadcrumb
+      tags:
+        - field_tags
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.news.default
+targetEntityType: node
+bundle: news
+mode: default
+content:
+  breadcrumb:
+    weight: 5
+    region: breadcrumb
+    settings: {  }
+    third_party_settings: {  }
+  field_add_component:
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_banner_image:
+    type: entity_reference_entity_view
+    weight: 1
+    region: image
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_news_description:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_summary:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: text_default
+    region: summary
+  field_tags:
+    weight: 6
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: span
+            fis-cl: 'icon icon--notification-white'
+            fis-at: ''
+            fi-el: span
+            fi-cl: ' badge badge-light'
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: entity_reference_label
+    region: tags
+hidden:
+  links: true

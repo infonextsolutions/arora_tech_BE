@@ -1,0 +1,22 @@
+uuid: c15c0c40-195f-45c6-b075-abc3131d06e4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - arora
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: arora_messages
+theme: arora
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

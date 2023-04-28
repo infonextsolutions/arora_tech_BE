@@ -1,0 +1,152 @@
+news:
+  label: News
+  category: arora/Layouts
+  template: layouts/news
+  regions:
+    title:
+      label: Title
+    image:
+      label: Hero Image
+    summary:
+      label: Summary
+    content:
+      label: Content
+    breadcrumb:
+      label: Bread
+    related:
+      label: Related
+    tags:
+      label: tags
+file:
+  label: File
+  category: arora/Layouts
+  template: layouts/file
+  regions:
+    title:
+      label: Title
+    file:
+      label: File
+       
+property:
+  label: Property
+  category: arora/Layouts
+  template: layouts/property
+  regions:
+    title:
+      label: Title
+    image:
+      label: Hero Image
+    code:
+      label: Property code
+    name:
+      label: Dealers name
+    contact:
+      label: Contact
+    content:
+      label: Content
+    breadcrumb:
+      label: Bread
+    related:
+      label: Related
+    tags:
+      label: tags
+    email:
+      label: Email
+    location:
+      label: Location
+basic:
+  label: Basic
+  category: arora/Layouts
+  template: layouts/basic
+  regions:
+    title:
+      label: Title
+    image:
+      label: Hero Image
+    bannertext:
+      label: Banner Text
+    content:
+      label: Content
+    breadcrumb:
+      label: Bread
+    related:
+      label: Related
+    bannerlink:
+      label: Banner Link
+cta:
+  label: Call to action
+  category: arora/Layouts
+  template: layouts/cta
+  regions:
+    body:
+      label: Body
+    link:
+      label: link
+teaser:
+  label: Teaser
+  category: arora/Layouts
+  template: layouts/teaser
+  regions:
+    title:
+      label: Title
+    image:
+      label: Image
+    summary:
+      label: Summary
+    date:
+      label: Date
+    readmore:
+      label: Readmore
+    tags:
+      label: Tags
+teaser-property:
+  label: Teaser property
+  category: arora/Layouts
+  template: layouts/teaser-property
+  regions:
+    title:
+      label: Title
+    image:
+      label: Image
+    summary:
+      label: Summary
+    date:
+      label: Date
+    readmore:
+      label: Readmore
+    tags:
+      label: Tags
+teaser--horizontal:
+  label: Teaser Horizontal
+  category: arora/Layouts
+  template: layouts/teaser--horizontal
+  regions:
+    title:
+      label: Title
+    image:
+      label: Image
+    readtime:
+      label: Read Time
+    date:
+      label: Date
+    tag:
+      label: tag
+    link:
+      label: link
+    ticket:
+      label: Tickets price
+homepage:
+  label: Homepage
+  category: arora/Layouts
+  template: layouts/homepage
+  regions:
+    title:
+      label: Title
+    image:
+      label: Hero Image
+    bannertext:
+      label: Banner Text
+    content:
+      label: Content
+    bannerlink:
+      label: Banner Link

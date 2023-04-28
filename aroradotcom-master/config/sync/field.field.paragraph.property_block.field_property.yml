@@ -1,0 +1,26 @@
+uuid: 32814da2-201f-4fd1-806b-2cd8ae8e56b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_property
+    - paragraphs.paragraphs_type.property_block
+  module:
+    - block_field
+id: paragraph.property_block.field_property
+field_name: field_property
+entity_type: paragraph
+bundle: property_block
+label: 'Property block'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    plugin_id: 'views_block:property-block_1'
+    settings: {  }
+default_value_callback: ''
+settings:
+  plugin_ids:
+    'views_block:property-block_1': 'views_block:property-block_1'
+field_type: block_field

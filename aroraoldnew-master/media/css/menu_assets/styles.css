@@ -1,0 +1,49 @@
+#cssmenu {
+	
+	float:left;
+	
+	border: none;
+	height:550px;
+	position:relative;
+	background-color:#1570A6;
+	min-width:183px;
+	color:white;
+	}
+
+#cssmenu ul{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	}
+#cssmenu li a {
+	height: 32px;
+  	height: 24px;
+	text-decoration: none;
+	font-weight:normal;
+	}	
+	
+#cssmenu li a:link, 
+#cssmenu li a:visited {
+	color: white;
+/*	font-weight:bold;*/
+font-size:15px;
+	display: block;
+/*	background: url(images/v3.jpg);*/
+	background-repeat:no-repeat;
+	padding: 8px 0 0 10px;
+	
+	}
+	
+#cssmenu li a:hover {
+	color: #666;
+	background: url(images/v3.jpg) 0 -32px;
+	background-repeat:no-repeat;
+	padding: 8px 0 0 10px;
+	}
+	
+#cssmenu li a:active {
+	color: #0e69be;
+	background: url(images/v3.jpg) 0 -64px;
+	background-repeat:no-repeat;
+	padding: 8px 0 0 10px;
+	}

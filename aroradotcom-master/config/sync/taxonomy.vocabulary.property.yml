@@ -1,0 +1,8 @@
+uuid: fd153acb-a086-4ec7-aa93-39766abd7213
+langcode: en
+status: true
+dependencies: {  }
+name: Property
+vid: property
+description: ''
+weight: 0

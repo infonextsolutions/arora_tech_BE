@@ -1,0 +1,145 @@
+.hero-banner {
+  position: relative;
+  background-color: #e8f1fa;
+}
+
+.hero-banner picture {
+  min-height: 14.4375rem;
+  width: 100%;
+}
+
+.hero-banner picture::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: '';
+  background-color: rgba(13, 18, 31, 0.2);
+  z-index: 2;
+}
+
+@media (min-width: 900px) {
+  .hero-banner picture {
+    min-height: 32.0625rem;
+  }
+}
+
+.hero-banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 14.4375rem;
+}
+
+.hero-banner picture {
+  /*display: none;*/
+}
+
+.hero-banner .container {
+  min-height: 14.4375rem;
+  position: relative;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 900px) {
+  .hero-banner .container {
+    min-height: 32.0625rem;
+  }
+}
+
+@media all and (-ms-high-contrast: none) {
+  .hero-banner .container {
+    height: 14.4375rem;
+  }
+}
+
+.hero-banner h1 {
+  width: 100%;
+  max-width: 53rem;
+}
+
+.hero-banner p {
+  width: 100%;
+}
+
+.hero-banner--centered .container {
+  max-width: 53rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.hero-banner--centered p {
+  max-width: none;
+}
+
+.hero-banner--image {
+  background-color: #4a4e57;
+  color: #fff;
+}
+
+.hero-banner--image picture {
+  display: block;
+}
+
+.hero-banner__imagery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.hero--button
+{
+        border: 1px solid white;
+    border-radius: 0;
+    padding: 0.8em;
+    background-color: transparent;
+    color: white !important;
+    text-transform: uppercase;
+}
+
+.hero--button a
+{
+    color:white;
+    margin-right: 0.5em;
+    font-family: "Barlow", sans-serif;
+}
+.hero--button a:hover {
+    color: white!important;
+}
+.hero--button a:focus {
+    color: white!important;
+}
+
+.hero--tag li.tags > a {
+    color: #fff;
+        word-spacing: -4px;
+}
+.hero--tag li.tags > a:hover {
+    color: #fff !important;
+}
+.hero--tag span.tag
+{
+    color: #fff !important;
+}

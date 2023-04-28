@@ -1,0 +1,14 @@
+uuid: c4a939b9-6ad8-4dbe-b370-9a2097a45bfe
+name: com
+mail: admin@com.cc
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/9
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

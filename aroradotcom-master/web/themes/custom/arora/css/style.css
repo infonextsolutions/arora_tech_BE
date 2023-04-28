@@ -1,0 +1,73 @@
+.img-cover
+{
+    height: 15em;
+    object-fit: cover;
+    width: 100%;
+}
+body
+{
+    background-color: #f2f2f2;
+}
+.card
+{
+    border:1px solid #dcdddf;
+}
+.hometitle
+{
+    border-bottom: 0.3em solid #d7153a;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+    /*width: fit-content;*/
+    display: table;
+}
+.banner-overlay-solid
+{
+    background-color: rgba(215, 21, 58, 0.8);
+}
+.page-link
+{
+    background-color: transparent;
+}
+.nav-inline .active {
+    font-weight: 700;
+    color: #0d121f;
+    border-bottom: 2px solid;
+    cursor: default;
+    background: #d7153a;
+    color: white;
+    padding: 0.9em;
+    border-radius: 2em;
+}
+.list-row-item, .list-row li {
+    border-bottom: none;
+}
+.list-row
+{
+    border-top:1px solid #c6c6c6;
+    margin-bottom: 0;
+}
+figcaption {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    padding: 0.25rem 0;
+    border-bottom: 1px solid #d3d3d3;
+    color: #4a4e57;
+    text-align: center;
+}
+.figure
+{
+    margin-bottom: 0 !important;
+}
+.banner img
+{
+    min-height: 19em ;
+}
+.col-fill-height
+{
+    flex-direction:row;
+}
+
+.pagination
+{
+    justify-content: flex-start;
+}

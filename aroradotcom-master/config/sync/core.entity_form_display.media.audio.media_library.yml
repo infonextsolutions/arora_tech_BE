@@ -1,0 +1,29 @@
+uuid: d97740df-7ccb-4e4b-bb96-e735a380f42e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.audio.field_media_audio_file
+    - media.type.audio
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+_core:
+  default_config_hash: 28vwMIYtvyjPcD4RyciZXIztxtZgmuWRCNgYemr_SZE
+id: media.audio.media_library
+targetEntityType: media
+bundle: audio
+mode: media_library
+content: {  }
+hidden:
+  created: true
+  field_media_audio_file: true
+  name: true
+  path: true
+  status: true
+  uid: true

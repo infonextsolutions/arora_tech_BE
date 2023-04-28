@@ -1,0 +1,41 @@
+.footer {
+  background-color: #e5e9ef;
+  padding: 2rem 0;
+  font-size: 0.875rem;
+}
+
+.footer-acknowledgement {
+  border-top: 1px solid #0d121f;
+  padding-top: 3rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.footer-acknowledgement p {
+  font-size: inherit;
+  line-height: inherit;
+  margin-bottom: 0;
+  max-width: none;
+}
+
+.footer a {
+  color: #0d121f;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: #004dca;
+}
+
+.footer img {
+  margin: 0 auto 3rem;
+  display: block;
+}
+
+@media (min-width: 1200px) {
+  .footer img {
+    margin: 0;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

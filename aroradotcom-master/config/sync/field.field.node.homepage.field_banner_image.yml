@@ -1,0 +1,28 @@
+uuid: 30b39538-9cfc-4d47-b147-c6a192616d15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_image
+    - media.type.image
+    - node.type.homepage
+id: node.homepage.field_banner_image
+field_name: field_banner_image
+entity_type: node
+bundle: homepage
+label: 'Banner image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

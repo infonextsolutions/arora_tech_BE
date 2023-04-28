@@ -1,0 +1,22 @@
+uuid: 71503761-d935-45fc-a870-60b48afa91d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.property_block.field_property
+    - paragraphs.paragraphs_type.property_block
+  module:
+    - block_field
+id: paragraph.property_block.default
+targetEntityType: paragraph
+bundle: property_block
+mode: default
+content:
+  field_property:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: block_field
+    region: content
+hidden: {  }

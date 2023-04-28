@@ -1,0 +1,23 @@
+uuid: 267baad9-0d0c-40ef-99de-e8031ac1fab7
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - arora
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: arora_search
+theme: arora
+region: help
+weight: -7
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+  page_id: ''
+visibility: {  }

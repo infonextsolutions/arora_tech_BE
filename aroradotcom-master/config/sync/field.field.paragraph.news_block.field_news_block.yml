@@ -1,0 +1,26 @@
+uuid: f20a6282-25ed-4659-a8cd-2ea525af9286
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_news_block
+    - paragraphs.paragraphs_type.news_block
+  module:
+    - block_field
+id: paragraph.news_block.field_news_block
+field_name: field_news_block
+entity_type: paragraph
+bundle: news_block
+label: 'News feed'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    plugin_id: 'views_block:news-block_1'
+    settings: {  }
+default_value_callback: ''
+settings:
+  plugin_ids:
+    'views_block:news-block_1': 'views_block:news-block_1'
+field_type: block_field

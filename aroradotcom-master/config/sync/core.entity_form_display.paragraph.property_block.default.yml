@@ -1,0 +1,33 @@
+uuid: f52ddcd1-d93e-43d0-99df-1bc57ac2a8f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.property_block.field_property
+    - paragraphs.paragraphs_type.property_block
+  module:
+    - block_field
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.property_block.default
+targetEntityType: paragraph
+bundle: property_block
+mode: default
+content:
+  field_property:
+    weight: 0
+    settings:
+      plugin_id: ''
+      settings: {  }
+      configuration_form: full
+    third_party_settings: {  }
+    type: block_field_default
+    region: content
+hidden:
+  created: true
+  status: true

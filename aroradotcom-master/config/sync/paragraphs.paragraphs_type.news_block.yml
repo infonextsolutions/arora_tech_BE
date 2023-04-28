@@ -1,0 +1,9 @@
+uuid: 4e1ed921-6552-4d4c-bff8-3f6fb7e29339
+langcode: en
+status: true
+dependencies: {  }
+id: news_block
+label: 'News block'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }
